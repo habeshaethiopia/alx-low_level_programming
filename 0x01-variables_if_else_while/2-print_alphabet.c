@@ -1,5 +1,6 @@
 #include <stdio.h>
-#include <ctype.h>
+#include <stdlib.h>
+#include <time.h>
 /**
  * main - Entry point
  * Description: 'the program's description'
@@ -9,8 +10,8 @@ int main(void)
 {
 	char i;
 
-	for (i = 'a' ; i <= 'Z'; i++)
+	for (i = 'a'; i <= 'z'; i++)
 		putchar(i);
-	putchar('\n');
+		putchar('\n');
 	return (0);
 }
