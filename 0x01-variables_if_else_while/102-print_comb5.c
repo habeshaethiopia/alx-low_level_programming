@@ -3,6 +3,7 @@
 #include <time.h>
 /**
  * Main - Entry point
+ * Description: 'the program's description'
  * Return: Always 0 (Sucsess)
  */
 int main(void)
