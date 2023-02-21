@@ -23,11 +23,11 @@ int main(void)
 		aft += bef;
 		bef = aft - bef;
 	}
-	unsigned long int l =1000000000;
-	bef1 = (bef / l);
-	bef2 = (bef % l);
-	aft1 = (aft / l);
-	aft2 = (aft % l);
+	unsigned long int l = 1000000000;
+	unsigned long int bef1 = (bef / l);
+	unsigned long intbef2 = (bef % l);
+	unsigned long intaft1 = (aft / l);
+	unsigned long intaft2 = (aft % l);
 
 	for (i = 92; i < 99; ++i)
 	{
