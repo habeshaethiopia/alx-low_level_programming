@@ -1,18 +1,21 @@
-#include <stdio.h>
-/**
- * main - Entry point
- *
- * Description: 'the program's description'
- *
- * Return: Always 0 (Success)
- */
-#include <stdlib.h>
-#include <time.h>
-/* more headers goes there */
+#include<stdio.h>
 
-/* betty style doc for function main goes there */
+/**
+ * main - fibonacci
+ *
+ * Purpose - no hardcode
+ *
+ * Return:  (Success)
+ */
+
 int main(void)
 {
-	printf("_putchar/n");
+	char str[] = "_putchar\n";
+	int i;
+
+	for (i = 0; i<9; i++)
+	{
+		_putchar(str[i]);
+	}
 	return (0);
 }
