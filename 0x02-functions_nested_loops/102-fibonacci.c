@@ -17,10 +17,10 @@ int main(void)
 
 	for (i = 1; i <= 50; ++i)
 	{
-		sum = i + j;
+		sum = k + j;
 		printf("%lu", sum);
-		i = j;
-		j = sum;
+		j = k;
+		k = sum;
 		if (i == 50)
 			printf("\n");
 		else
