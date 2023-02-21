@@ -25,9 +25,9 @@ int main(void)
 	}
 	unsigned long int l = 1000000000;
 	unsigned long int bef1 = (bef / l);
-	unsigned long intbef2 = (bef % l);
-	unsigned long intaft1 = (aft / l);
-	unsigned long intaft2 = (aft % l);
+	unsigned long int bef2 = (bef % l);
+	unsigned long int aft1 = (aft / l);
+	unsigned long int aft2 = (aft % l);
 
 	for (i = 92; i < 99; ++i)
 	{
