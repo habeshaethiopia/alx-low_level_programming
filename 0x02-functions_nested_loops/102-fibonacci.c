@@ -15,18 +15,17 @@ int main(void)
 	k = 2;
 	sum = 0;
 
-	for (i = 1; i <= 33; ++i)
+	for (i = 1; i <= 50; ++i)
 	{
-		if (j < 4000000 && (j % 2) == 0)
-		{
-			sum = sum + j;
-		}
-		next = j + k;
-		j = k;
-		k = next;
+		sum = i + j;
+		printf("%lu", sum);
+		i = j;
+		j = sum;
+		if (i == 50)
+			printf("\n");
+		else
+			printf(", ");
 	}
-
-	printf("%lu\n", sum);
 
 	return (0);
 }
