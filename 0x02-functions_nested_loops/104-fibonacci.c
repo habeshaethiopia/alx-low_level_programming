@@ -11,6 +11,11 @@
 
 int main(void)
 {
+	unsigned long int l = 1000000000;
+	unsigned long int bef1 = (bef / l);
+	unsigned long int bef2 = (bef % l);
+	unsigned long int aft1 = (aft / l);
+	unsigned long int aft2 = (aft % l);
 	unsigned long int i;
 	unsigned long int bef = 1;
 	unsigned long int aft = 2;
@@ -23,12 +28,6 @@ int main(void)
 		aft += bef;
 		bef = aft - bef;
 	}
-	unsigned long int l = 1000000000;
-	unsigned long int bef1 = (bef / l);
-	unsigned long int bef2 = (bef % l);
-	unsigned long int aft1 = (aft / l);
-	unsigned long int aft2 = (aft % l);
-
 	for (i = 92; i < 99; ++i)
 	{
 		printf(", %lu", aft1 + (aft2 / l));
