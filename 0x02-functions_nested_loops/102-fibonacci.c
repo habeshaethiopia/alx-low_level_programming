@@ -11,8 +11,8 @@ int main(void)
 	int i;
 	unsigned long int j, k, sum;
 
-	j = 1;
-	k = 2;
+	j = 0;
+	k = 1;
 	sum = 0;
 
 	for (i = 1; i <= 50; ++i)
