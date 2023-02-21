@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include <time.h>
 /**
- * Main - Entry point
- * Description: 'the program's description'
- * Return: Always 0 (Sucsess)
+ * main - Entry point
+ * Description: 'description'
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
