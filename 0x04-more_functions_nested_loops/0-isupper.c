@@ -1,6 +1,6 @@
 /**
  * _isupper - afunction to check if the char is upper
- * @c: achar paremeter of th function
+ * @c: int paremeter of the function
  * Return: 1 for upper case
  * returns - 0 otherwise
  */
