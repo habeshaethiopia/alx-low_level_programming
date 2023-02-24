@@ -1,16 +1,16 @@
 #include "main.h"
-
 /**
  * main - check the code
  *
- * Return: Always 0 on success.
+ * Return: Always 0.
  */
 int main(void)
 {
-	int x;
+	int i;
 
-	x = 0;
-	positive_or_negative(x);
+	i = 0;
+	positive_or_negative(i);
 
 	return (0);
 }
+
