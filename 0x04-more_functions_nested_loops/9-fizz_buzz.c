@@ -1,27 +1,36 @@
-#include <stdio.h>
 #include "main.h"
+#include <stdlib.h>
 
-/*
- * main - fizz_buzz
+/**
+ * main - the functio
  *
  * Return: Always 0 (Success)
  */
+
 int main(void)
 {
-	int i;
+	int nb;
 
-	for (i = 1; i <= 99; i++)
+	for (nb = 1; nb <= 99; nb++)
 	{
-		if (i % 5 == 0)
-			printf("Buzz");
-		else if (i % 3 == 0)
-			printf("Fizz");
-		else if (i % 15 == 0)
-			printf("FizzBuzz");
+		if (nb % 3 == 0)
+		{
+			if (nb % 5 == 0)
+				printf("FizzBuzz ");
+			else
+				printf("Fizz ");
+		}
+		else if (nb % 5 == 0)
+		{
+			if (nb % 3 == 0)
+				printf("FizzBuzz ");
+			else
+				printf("Buzz ");
+
+		}
 		else
-			printf("%d", i);
-		printf(" ");
+			printf("%d ", nb);
 	}
-	printf("\n");
+	printf("Buzz\n");
 	return (0);
 }
