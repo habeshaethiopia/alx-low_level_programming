@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * main - check the code
  *
@@ -13,4 +14,3 @@ int main(void)
 
 	return (0);
 }
-
