@@ -7,8 +7,8 @@
 
 int main(void)
 {
-	int x;
-	long int i = 612852475143;
+	long x, y;
+	long i = 612852475143;
 
 	while (i != 1)
 	{
@@ -16,12 +16,13 @@ int main(void)
 		{
 			if (i % x == 0)
 			{
-				printf("%d\n", x);
+				y = x;
 				i = i / x;
 			}
 			else
 				x++;
 		}
 	}
+	printf("%ld\n", y);
 	return (0);
 }
