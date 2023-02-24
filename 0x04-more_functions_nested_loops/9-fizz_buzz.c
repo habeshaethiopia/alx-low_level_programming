@@ -8,7 +8,7 @@ int main(void)
 {
 	int i;
 
-	for (i = 1; i <= 100; i++)
+	for (i = 1; i <= 99; i++)
 	{
 		if (i % 5 == 0)
 			printf("Buzz");
@@ -18,7 +18,7 @@ int main(void)
 			printf("FizzBuzz");
 		else
 			printf("%d", i);
-		if (i != 100)
+		if (i != 99)
 		printf(" ");
 	}
 	printf("\n");
