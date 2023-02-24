@@ -16,7 +16,7 @@ int main(void)
 		{
 			if (i % x == 0)
 			{
-				printf("%d, ", x);
+				printf("%d", x);
 				i = i / x;
 			}
 			else
