@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include "main.h"
+
 /*
  * main - fizz_buzz
  *
@@ -18,7 +20,6 @@ int main(void)
 			printf("FizzBuzz");
 		else
 			printf("%d", i);
-		if (i != 99)
 		printf(" ");
 	}
 	printf("\n");
