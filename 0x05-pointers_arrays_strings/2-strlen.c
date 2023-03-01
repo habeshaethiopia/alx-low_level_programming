@@ -14,3 +14,4 @@ int _strlen(char *s)
 		n++;
 		s++;
 	}
+}
