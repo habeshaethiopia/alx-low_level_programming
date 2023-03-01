@@ -13,8 +13,7 @@ void print_rev(char *str)
 		str++;
 	do {
 		str--;
-		if (*str != '\0')
-			_putchar(*str);
+		_putchar(*str);
 	} while (*str != a);
 	_putchar('\n');
 }
