@@ -1,4 +1,4 @@
-#includ "main.h"
+#include "main.h"
 /**
  * puts2 - function
  * @s: string
