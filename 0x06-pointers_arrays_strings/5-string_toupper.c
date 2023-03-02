@@ -10,7 +10,7 @@ char *string_toupper(char *x)
 	{
 		if (*x >= 'a' && *x <= 'z')
 			*x = *x - 'A' - 1;
-		x++
+		x++;
 	}
 	return (x);
 }
