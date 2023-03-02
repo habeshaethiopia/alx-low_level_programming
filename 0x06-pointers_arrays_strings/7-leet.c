@@ -20,6 +20,7 @@ char *leet(char *x)
 			x[i] = '7';
 		else if (x[i] == 'l' || x[i] == 'L')
 			x[i] = '1';
+		i++;
 	}
 	return (x);
 }
