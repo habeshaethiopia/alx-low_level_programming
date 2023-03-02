@@ -9,7 +9,7 @@ char *string_toupper(char *x)
 	while (*x != '\0')
 	{
 		if (*x >= 'a' && *x <= 'z')
-			*x = *x - 'A' - 1;
+			*x = *x - 32;
 		x++;
 	}
 	return (x);
