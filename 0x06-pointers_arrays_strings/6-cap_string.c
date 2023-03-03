@@ -1,7 +1,7 @@
 /**
  * is_spa - function to determine if the char is separator or not
  * @x: acharacter
- * return: integer 0 or 1
+ * Return: integer 0 or 1
  *
  */
 int is_spa(char x)
