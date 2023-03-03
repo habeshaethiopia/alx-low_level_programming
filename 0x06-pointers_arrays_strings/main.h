@@ -5,4 +5,6 @@ int _putchar(char c);
 char *cap_string(char *n);
 char *_strncpy(char *dest, char *src, int n);
 char *rot13(char *s);
+void print_number(int n);
+
 #endif
