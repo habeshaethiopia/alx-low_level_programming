@@ -6,20 +6,18 @@
  */
 char *leet(char *x)
 {
-	int i = 0;
+	int i = 0, j;
+	int rpw[] = {'4', '3', '0', '7', '1'};
+	char rp[] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
 
 	while (x[i] != '\0')
 	{
-		if (x[i] == 'a' || x[i] == 'A')
-			x[i] = '4';
-		else if (x[i] == 'e' || x[i] == 'E')
-			x[i] = '3';
-		else if (x[i] == 'o' || x[i] == 'O')
-			x[i] = '0';
-		else if (x[i] == 't' || x[i] == 'T')
-			x[i] = '7';
-		else if (x[i] == 'l' || x[i] == 'L')
-			x[i] = '1';
+		for (j = 0; j < 10; j++)
+			if (x[i] == rp[j])
+			{
+				x[i] = rpw[j / 2];
+				break;
+			}
 		i++;
 	}
 	return (x);
