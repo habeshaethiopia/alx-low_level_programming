@@ -1,4 +1,4 @@
-#include <main.h>
+#include "main.h"
 /**
  * print_number - function prints only numbers
  * @n: number
