@@ -16,5 +16,7 @@ void print_square(int size);
 void print_triangle(int size);
 void print_number(int n);
 void rev_string(char *s);
+void puts_half(char *str);
+void print_array(int *a, int n);
 
 #endif /* MAIN_H */
