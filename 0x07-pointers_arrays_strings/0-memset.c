@@ -1,5 +1,5 @@
 /**
- * _memset - function fill memory with a constant
+ * _memset - function fill memory with constant
  * @s: the array
  * @b: the char  filled to the the array
  * @n: number of byte the array filled
@@ -7,7 +7,7 @@
  */
 char *_memset(char *s, char b, unsigned int n)
 {
-	int i;
+	unsigned int i;
 
 	for (i = 0; i < n; i++)
 	{
