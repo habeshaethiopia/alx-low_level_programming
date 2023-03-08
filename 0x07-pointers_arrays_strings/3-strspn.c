@@ -6,8 +6,8 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int n = 0;
-	int i, j;
+	unsigned int i = 0;
+	int n = 0, j;
 
 	for (i = 0; s[i] != '\n'; i++)
 	{
