@@ -1,3 +1,22 @@
+char *_rev(char *str)
+{
+	char *rev = "";
+
+	if (*str != '\0')
+		rev = _rev(str++);
+	return rev;
+}
+int cmpwrev(char *Or, char *rev)
+{
+	int x = 1;
+
+	if (*Or == *rev && *Or != '\0')
+		x *= cmpwrev(Or++, rev++);
+	else if (*Or != '\0' && *rev != '\0')
+		return (0);
+	return (x);
+}
+
 /**
  * is_palindrome - function to check palindrome
  * @s: string
@@ -6,16 +25,7 @@
  */
 int is_palindrome(char *s)
 {
-	int i, j = -1, n = 0, ch = 0;
+	char * rev = _rev(s);
 
-	while (s[j] != '\0')
-		j++;
-	for (i = 0; i < j; i++, j--)
-	{
-		if (s[i] == s[j])
-			n++;
-	}
-	if (i == n)
-		ch = 1;
-	return (ch);
+	return (cmpwrev(s, rev));
 }
