@@ -1,16 +1,23 @@
+int square (int n, int sq)
+{
+	if (n == sq * sq)
+		return (sq);
+	else if (n < sq * sq)
+		return (-1);
+	else 
+		return (square(n, sq + 1));
+}
+				
 /**
  * _sqrt_recursion - a function that returns the squre root of a num
  * @n: number
  * Return: the result
  *
  */
-int _squrt_recursion(int n)
+int _sqrt_recursion(int n)
 {
-	int i = 1, val = 0;
-
-	 if ( n > val)
-		 val = _squrt_recursion(n );
-	 if ( n < val)
-		 return (-1);
-	 return(val);
+	if (n < 0)
+		return (-1);
+	else
+		return (square(n, 0)); 
 }
