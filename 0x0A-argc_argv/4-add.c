@@ -15,7 +15,7 @@ int convert(char *n)
 		if (n[i] >= '0' && n[i] <= '9')
 		{
 			num *= 10;
-			num = n[i] - '0';
+			num += n[i] - '0';
 			i++;
 		}
 		else
