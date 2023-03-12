@@ -10,12 +10,14 @@ int main(int argc, char *argv[])
 {
 	int bir;
 	int cent = 0;
-	if (argc !=2)
+
+	if (argc > 2)
 	{
 		printf("Error\n");
-		return(1);
+		return (1);
 	}
-	bir = atoi(argv[1]); 
+	if (argc == 2)
+		bir = atoi(argv[1]);
 	while (bir >= 25)
 	{
 		cent++;
@@ -41,7 +43,7 @@ int main(int argc, char *argv[])
 		cent++;
 		bir -= 1;
 	}
-        if (bir == 0)
+	if (bir == 0)
 		printf("%d\n", cent);
 
 
