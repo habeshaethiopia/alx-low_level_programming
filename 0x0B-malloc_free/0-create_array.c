@@ -2,9 +2,9 @@
 #include "main.h"
 
 /**
- * creat_array - function which creat array using malloc
- * &size: the size of the array
- * $c: the intialize value
+ * create_array - function which creat array using malloc
+ * @size: the size of the array
+ * @c: the intialize value
  * Return: char pointer
  *
  */
@@ -26,5 +26,5 @@ char *create_array(unsigned int size, char c)
 		return (p);
 	}
 	else
-		return NULL;
+		return (NULL);
 }
