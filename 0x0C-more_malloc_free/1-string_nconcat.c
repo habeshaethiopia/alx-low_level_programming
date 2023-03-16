@@ -16,12 +16,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = "";
 	if (s2 == NULL)
 		s1 = "";
-	for (i = 0; s2[i] != '\0'; i++)
-		c++;
+	for (i = 0; s2[i] != '\0'; i++, c++)
+		;
 	if (n < c)
 		c = n;
-	for (i = 0; s1[i] != '\0'; i++)
-		c++;
+	for (i = 0; s1[i] != '\0'; i++, c++)
+		;
 	p = malloc(c * sizeof(char) + 1);
 	if (p == NULL)
 		return (NULL);
