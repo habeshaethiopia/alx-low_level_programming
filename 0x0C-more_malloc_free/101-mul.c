@@ -27,12 +27,10 @@ long change(char *n)
 	return (num);
 }
 
-
-#include <stdlib.h>
 /**
  * main - a main functoin that to multiplY
- * @ac - argiment counter
- * @av - astring array
+ * @ac: argiment counter
+ * @av: astring array
  * Return: 0 on success
  *
  */
@@ -41,10 +39,13 @@ int main(int ac, char *av[])
 	long a, b;
 
 	if (ac < 3 || ac > 3)
+	{
+		printf("Error\n");
 		exit(98);
+	}
 	a = change(av[1]);
 	b = change(av[2]);
 	printf("%ld\n", a * b);
 	return (0);
 }
-	
+
