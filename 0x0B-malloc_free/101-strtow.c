@@ -26,7 +26,7 @@ char **strtow(char *str)
 		if (str[i] != ' ')
 			cc++;
 		if (str[i + 1] != ' ')
-		{
+		
 			p[n] = malloc(sizeof(char) * cc + 1);
 			n++;
 		}
