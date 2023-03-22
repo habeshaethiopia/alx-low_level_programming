@@ -7,8 +7,7 @@
  */
 void print_name(char *name, void (*f)(char *))
 {
-	if (f == print_name_as_is)
-		print_name_as_is(name);
-	if (f == print_name_uppercase)
-		print_name_uppercase(name);
+	if(name == NULL || f == NULL)
+		return;
+	(*f)(name);
 }
