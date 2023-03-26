@@ -23,14 +23,14 @@ int main(int ac, char **av)
 		if (fun == NULL)
 		{
 			printf("Error\n");
-			exit(98);
+			exit(99);
 		}
 		printf("%d\n", fun(a, b));
 	}
 	if (ac != 4)
 	{
 		printf("Error\n");
-		exit(99);
+		exit(98);
 	}
 	return (0);
 }
