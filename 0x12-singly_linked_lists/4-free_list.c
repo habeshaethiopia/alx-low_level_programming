@@ -4,7 +4,7 @@
  * @head: the head of the single linked list
  *
  */
-int free_list(list_t *head)
+void free_list(list_t *head)
 {
 	list_t *delete, *p;
 
@@ -17,5 +17,5 @@ int free_list(list_t *head)
 		delete = p;
 	}
 	head = NULL;
-	return (0);
+
 }
