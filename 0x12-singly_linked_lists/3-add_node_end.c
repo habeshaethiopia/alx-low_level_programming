@@ -1,5 +1,5 @@
 #include "lists.h"
-
+int _strlen (char *s);
 /**
  * add_node_end - add end of the node
  * @head: the list head
