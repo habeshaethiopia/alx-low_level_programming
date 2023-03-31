@@ -2,7 +2,7 @@
 /**
  * list_len - returns number of elements
  * @h: the poiter to the list
- * Rerurn: size of the list
+ * Return: size of the list
  *
  *
  */
