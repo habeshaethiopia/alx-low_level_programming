@@ -1,8 +1,8 @@
 %define sys_write 1
-%define stdouut 1
+%define stdout 1
 
 %define sys_exit 60
-%define succes 0
+%define success 0
 
 %define n1 10
 
