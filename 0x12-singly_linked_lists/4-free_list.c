@@ -6,16 +6,16 @@
  */
 void free_list(list_t *head)
 {
-	list_t *delete, *p;
+	list_t *position, *next;
 
-	delete = head;
-	while (delete != '\0')
+	position = head;
+
+	while (position != '\0')
 	{
-		p = delete->next;
-		free(delete->str);
-		free(delete);
-		delete = p;
+		next = position->next;
+		free(position->str);
+		free(position);
+		position = next;
 	}
 	head = '\0';
-
 }
