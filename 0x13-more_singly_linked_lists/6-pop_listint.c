@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * pop-listint - fuction to delete the first node of the list
+ * pop_listint - fuction to delete the first node of the list
  * @head: address of the first node
  * Return: the node value
  *
