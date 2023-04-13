@@ -14,6 +14,8 @@ int append_text_to_file(const char *filename, char *text_content)
 	fd = fopen(filename, "a");
 	if (!fd)
 		return (-1);
+	if (!filename)
+		return (-1);
 	while (text_content[l])
 	{
 		l++;
