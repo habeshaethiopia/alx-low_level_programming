@@ -16,13 +16,16 @@ int append_text_to_file(const char *filename, char *text_content)
 		return (-1);
 	if (!filename)
 		return (-1);
-	while (text_content[l])
+	if (text_content)
 	{
-		l++;
+		while (text_content[l])
+		{
+			l++;
+		}
+		i = fwrite(text_content, 1, l, fd);
+		if (i == -1)
+			return (-1);
 	}
-	i = fwrite(text_content, 1, l, fd);
-	if (i == -1)
-		return (-1);
 	fclose(fd);
 	return (1);
 }
