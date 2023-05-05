@@ -2,7 +2,7 @@
 /**
  * _putchar - calling write system function
  * @s: char to print
- * return: num
+ * Return: num
  *
  */
 int _putchar(char s)
