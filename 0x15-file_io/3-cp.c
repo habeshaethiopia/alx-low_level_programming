@@ -33,9 +33,9 @@ int main(int ac ,char **av)
 		free(buff);
 		exit(99);
 	}
-	while(fread(buff, 1024, 1, or))
+	while(x = fread(buff, 1024, 1, or))
 	{
-		y =fwrite(buff,x , 1, cp);
+		y = fwrite(buff, x, 1, cp);
 		if (!cp || x != y)
 		{
 			dprintf(2,"Error: Can't write to %s \n", av[2]);
