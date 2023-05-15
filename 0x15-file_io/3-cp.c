@@ -33,7 +33,7 @@ int main(int ac ,char **av)
 		free(buff);
 		exit(99);
 	}
-	while(x = fread(buff, 1024, 1, or))
+	while((x = fread(buff, 1024, 1, or)) > 0)
 	{
 		y = fwrite(buff, x, 1, cp);
 		if (!cp || x != y)
