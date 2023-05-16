@@ -35,7 +35,7 @@ int main(int ac, char **av)
 		free(buff);
 		exit(99);
 	}
-	while ((x = getline(&buff, &n, or)) != -1)
+	while ((getline(&buff, &n, or)) != -1)
 	{
 		y = fwrite(buff, n, 1, cp);
 	}
