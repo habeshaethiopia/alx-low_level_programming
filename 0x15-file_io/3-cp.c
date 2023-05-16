@@ -18,7 +18,7 @@ int main(int ac, char **av)
 	if (ac != 3)
 	{
 		free(buff);
-		dprintf(1, "Usage:.// cp file_from file_to\n");
+		/*dprintf(1, "Usage:.// cp file_from file_to\n");*/
 		exit(97);
 	}
 	or = fopen(av[1], "r");
