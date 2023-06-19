@@ -1,3 +1,3 @@
 #!/bin/bash
- gcc -shared -fPIC -o libmyrand.so mylib.c
- LD_PRELODE=./libmyrand.so ./gm 9 8 10 24 75 9
+gcc mylib.c -c -fPIC && gcc *.o -shared -o libcrack.so
+ LD_PRELOAD=/$PWD/libcrack.so ./gm 9 8 10 24 75 9
