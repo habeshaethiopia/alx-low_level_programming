@@ -1,9 +1,11 @@
-#include <stdio.h>
-#include <unistd.h>
 #include <stdlib.h>
-int printf(const char *format, ...)
-{
-    write(1, "9 8 10 24 75 - 9\n", 17);
-    write(1, "Congratulations, you win the jackpot\n", 38);
-    exit(EXIT_SUCCESS);
+
+static int index = 0;
+static int values[] = {9, 8, 10, 24, 75, 9};
+static int num_values = 6;
+
+int rand(void) {
+    int value = values[index];
+    index = (index + 1) % num_values;
+    return value;
 }
