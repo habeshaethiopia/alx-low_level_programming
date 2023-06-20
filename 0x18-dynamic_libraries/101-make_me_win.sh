@@ -1,3 +1,3 @@
 #!/bin/bash
-gcc --shared -o /$PWD/librand.so mylib.c 
- LD_PRELOAD=/$PWD/librand.so
+gcc --shared -o /tmp/librand.so mylib.c 
+ LD_PRELOAD=/tmp/librand.so
