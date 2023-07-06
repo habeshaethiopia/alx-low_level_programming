@@ -13,7 +13,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 
 	if (!ht || !key)
 		return (NULL);
-	i = key_index(key, ht->size);
+	i = key_index((const unsigned char *)key, ht->size);
 	curr = ht->array[i];
 	while (curr)
 	{
