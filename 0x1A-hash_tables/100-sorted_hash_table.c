@@ -45,13 +45,14 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 		if (strcmp(curr->key, key) == 0)
 		{
 			free(curr->value);
-			curr->value = value;
+			curr->value = strdup(value);
 			if (!curr->value)
 				exit(1);
 			return (1);
 		}
 		curr = curr->next;
 	}
+	
 	New = malloc(sizeof(shash_node_t));
 	if (New == NULL)
 		exit(1);
