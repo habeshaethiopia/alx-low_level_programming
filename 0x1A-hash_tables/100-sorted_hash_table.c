@@ -63,9 +63,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	if (!New->value)
 		return (0);
 	New->next = ht->array[index];
-	New->sprev = NULL;
-	New->next = NULL;
-	ht->array[index] = New;
+	New->sprev = NULL, New->next = NULL, ht->array[index] = New;
 	if (ht->shead == NULL)
 	{
 		ht->shead = New;
