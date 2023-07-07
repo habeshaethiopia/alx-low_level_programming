@@ -9,7 +9,7 @@ shash_table_t *shash_table_create(unsigned long int size)
 {
 	shash_table_t *table;
 
-	table = malloc(sizeof(shash_table_t *));
+	table = malloc(sizeof(shash_table_t));
 	if (!table)
 		return (NULL);
 	table->size = size;
@@ -47,19 +47,21 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 			free(curr->value);
 			curr->value = strdup(value);
 			if (!curr->value)
-				exit(1);
+				return (0);
 			return (1);
 		}
 		curr = curr->next;
 	}
-	
+
 	New = malloc(sizeof(shash_node_t));
 	if (New == NULL)
-		exit(1);
+		return (0);
 	New->key = strdup(key);
-	New->value = strdup(key);
-	if (!New->key || !New->value)
-		exit(1);
+	if (!New->key)
+		return (0);
+	New->value = strdup(value);
+	if (!New->value)
+		return (0);
 	New->next = ht->array[index];
 	New->sprev = NULL;
 	New->next = NULL;
@@ -104,7 +106,7 @@ void place(shash_table_t *table, shash_node_t *node)
 				return;
 			}
 			prev = curr;
-			curr = curr->next;
+			curr = curr->snext;
 		}
 		prev->snext = node;
 		node->sprev = prev;
@@ -157,6 +159,7 @@ void shash_table_print(const shash_table_t *ht)
 		f = 1;
 		curr = curr->snext;
 	}
+	printf("}\n");
 }
 /**
  * shash_table_print_rev - the function to print the entire key value paire in the hash table
@@ -170,7 +173,7 @@ void shash_table_print_rev(const shash_table_t *ht)
 
 	if (ht == NULL)
 		return;
-	curr = ht->shead;
+	curr = ht->stail;
 	printf("{");
 	while (curr)
 	{
@@ -178,8 +181,9 @@ void shash_table_print_rev(const shash_table_t *ht)
 			printf(", ");
 		printf("'%s': '%s'", curr->key, curr->value);
 		f = 1;
-		curr = curr->snext;
+		curr = curr->sprev;
 	}
+	printf("}\n");
 }
 /**
  * shash_table_delete - the function to delete the entire table
@@ -195,15 +199,18 @@ void shash_table_delete(shash_table_t *ht)
 		return;
 	for (i = 0; i < ht->size; i++)
 	{
-		curr = ht->array[i];
-		while (curr)
+		if (ht->array[i])
 		{
-			temp = curr;
-			free(curr->key);
-			if (curr->value)
-				free(curr->value);
-			curr = curr->next;
-			free(temp);
+			curr = ht->array[i];
+			while (curr)
+			{
+				temp = curr;
+				free(curr->key);
+				if (curr->value)
+					free(curr->value);
+				curr = curr->next;
+				free(temp);
+			}
 		}
 	}
 	free(ht->array);
