@@ -63,7 +63,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	if (!New->value)
 		return (0);
 	New->next = ht->array[index];
-	New->sprev = NULL, New->next = NULL, ht->array[index] = New;
+	New->sprev = NULL, ht->array[index] = New;
 	if (ht->shead == NULL)
 	{
 		ht->shead = New;
@@ -136,7 +136,7 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 	return (NULL);
 }
 /**
- * shash_table_print - the function to print the entire key value paire in the hash table
+ * shash_table_print - print the entire key value paire in the hash table
  *
  * @ht: the table
  */
@@ -160,7 +160,7 @@ void shash_table_print(const shash_table_t *ht)
 	printf("}\n");
 }
 /**
- * shash_table_print_rev - the function to print the entire key value paire in the hash table
+ * shash_table_print_rev - print the entire key value paire in the hash table
  *
  * @ht: the table
  */
