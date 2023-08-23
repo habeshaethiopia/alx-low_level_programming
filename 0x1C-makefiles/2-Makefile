@@ -6,3 +6,5 @@ all:
 	$(CC) -c -o main.o main.c
 	$(CC) -c -o school.o school.c
 	$(CC) $(OBJ) -o $(NAME)
+clean:
+	rm *.o
