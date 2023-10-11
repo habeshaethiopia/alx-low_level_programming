@@ -1,4 +1,5 @@
 #include "search_algos.h"
+
 /**
  * interpolation_search - the algorithm name
  * @array: the array
