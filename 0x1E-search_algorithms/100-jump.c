@@ -1,5 +1,6 @@
 #include "search_algos.h"
 #include <math.h>
+#define min(a, b) ((a) < (b) ? (a) : (b))
 
 /**
  * jump_search - jump search algorithm
@@ -17,7 +18,7 @@ int jump_search(int *array, size_t size, int value)
 	if (!array)
 		return (-1);
 
-	while (array[fmin(step, size) - 1] < value)
+	while (array[(min(step, size) - 1)] < value)
 	{
 		printf("Value checked array[%lu] = [%d]\n", prev, array[prev]);
 		prev = step;
