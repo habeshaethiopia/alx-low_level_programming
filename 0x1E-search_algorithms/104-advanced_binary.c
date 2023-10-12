@@ -15,6 +15,15 @@ int advanced_binary(int *array, size_t size, int value)
 		return (-1);
 	return (helper(array, 0, size - 1, value));
 }
+/**
+ * helper - afunction to help binary
+ *
+ * @array: the array
+ * @low: the min index
+ * @high: the max index
+ * @value: searched value
+ * Return: the index or -1
+ */
 int helper(int *array, int low, int high, int value)
 {
 	int mid, i;
